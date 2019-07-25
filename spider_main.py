@@ -28,6 +28,7 @@ class SpiderMain(object):
 
 
 if __name__ == "__main__":
-    root_url = "https://www.dytt8.net/html/tv/rihantv/index.html"
-    obj_spider = SpiderMain()
-    obj_spider.craw(root_url)
+    for i in range(1, 43):
+        root_url = "https://www.dytt8.net/html/tv/rihantv/list_8_"+str(i)+".html"
+        obj_spider = SpiderMain()
+        obj_spider.craw(root_url)
