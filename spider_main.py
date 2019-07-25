@@ -19,8 +19,8 @@ class SpiderMain(object):
                 new_urls, new_data = self.parser.parse(new_url, html_count)
                 self.urls.add_new_urls(new_urls)
                 self.outputer.collect_data(new_data)
-                # if count == 1000:
-                #     break
+                if count == 1000:
+                    break
                 count = count + 1
             except:
                 print('crawl failed')
