@@ -5,8 +5,9 @@ import re
 
 class HtmlParser(object):
     def _get_new_urls(self, page_url, soup):
+        # /html/gndy/jddy/20190502/58535.html
         new_urls = set()
-        links = soup.find_all('a', href=re.compile(r"/html/tv/rihantv/\d+/\d+.html"))
+        links = soup.find_all('a', href=re.compile(r"/html/gndy/dyzz/\d+/\d+.html"))
         for link in links:
             new_url = link['href']
             new_full_url = parse.urljoin(page_url, new_url)
@@ -32,7 +33,4 @@ class HtmlParser(object):
 
 
 
-
-
-        
 
